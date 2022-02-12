@@ -1,0 +1,133 @@
+@import "fonts";
+@import "variables";
+@import "mixins";
+//sekarang tdk disarankan menggunaan imprort,disarankan menggunakan use supaya bisa diakses secara global
+
+//styles
+body {
+  font-family: "Quattrocento Sans", sans-serif;
+  background-image: url(../img/bg.png);
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: 60vmax;
+  background-color: $warnaKedua;
+}
+
+//navbar
+.custom-nav {
+  .navbar-brand {
+    img {
+      width: 25px;
+      height: 25px;
+      margin-top: -7px;
+    }
+    span {
+      color: $warnaKelima;
+      font-weight: 600;
+      font-size: 1.4rem;
+      margin-left: 0.4em;
+    }
+  }
+
+  #navbarNav {
+    .navbar-nav {
+      .nav-item {
+        .nav-link {
+          color: $warnaKelima;
+          font-weight: 600;
+          text-transform: uppercase;
+          margin-left: 2.4em;
+          transition: 0.3s color ease;
+
+          &:hover {
+            color: darken($warnaKedua, 50%);
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 992px) {
+    margin-top: -1em;
+  }
+}
+
+//custom section
+.custom-section {
+  margin-top: 10em;
+  h3 {
+    font-weight: 100;
+    font-size: 3rem;
+    color: $warnaKelima;
+    white-space: nowrap;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+  h2 {
+    font-weight: 700;
+    font-size: 4rem;
+    color: $warnaKelima;
+    white-space: nowrap;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+  p {
+    color: $warnaKelima;
+    font-size: 1.1em;
+    margin-top: 1em;
+    text-align: left;
+  }
+  a {
+    @include tombol;
+    border: 1px solid transparent;
+    transition: 0.5s ease;
+
+    &:hover {
+      color: $warnaKelima;
+      border: 1px solid $warnaKelima;
+      background-color: transparent;
+    }
+  }
+
+  @media screen and (max-width: 992px) {
+    margin-top: 1em;
+    text-align: center;
+  }
+}
+
+#benefits {
+  .container {
+    .row {
+      padding-top: 40px;
+    }
+  }
+}
+
+#join {
+  a {
+    @include tombol;
+    border: 1px solid transparent;
+    transition: 0.5s ease;
+    margin-top: 0.5em;
+
+    &:hover {
+      color: $warnaKelima;
+      border: 1px solid $warnaKelima;
+      background-color: transparent;
+    }
+  }
+}
+
+#contact {
+  .container {
+    background-color: $warnaPertama;
+    .row {
+      margin-top: 2em;
+      margin-bottom: 2em;
+      margin-left: 1em;
+      margin-right: 1em;
+      a {
+        color: white;
+      }
+    }
+  }
+}

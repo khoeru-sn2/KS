@@ -1,0 +1,9 @@
+//mixin
+@mixin tombol {
+  display: inline-block;
+  color: white;
+  background-color: black;
+  border-radius: 2em;
+  padding: 0.2em 1.5em;
+  text-decoration: none;
+}
